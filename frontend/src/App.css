@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.role-selector {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.role-selector select {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #667eea;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.scenario-card {
+  border: 2px solid #667eea;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.scenario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.scenario-card h3 {
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.scenario-card .description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.severity {
+  font-weight: bold;
+  color: #764ba2;
+  margin-bottom: 5px !important;
+}
+
+.category {
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 10px !important;
+}
+
+.scenario-card button {
+  width: 100%;
+  padding: 10px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.scenario-card button:hover {
+  background: #764ba2;
+}
+
+.simulation {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #f0f4ff;
+  border-radius: 10px;
+  border-left: 5px solid #667eea;
+}
+
+.simulation h2 {
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.scenario-description {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.decision-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.decision-prompt {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.decision-btn {
+  padding: 15px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  text-align: left;
+}
+
+.decision-btn:hover {
+  background: #764ba2;
+}
+
+.result {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+.result h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.result h3.correct {
+  color: #28a745;
+}
+
+.result h3.incorrect {
+  color: #dc3545;
+}
+
+.result p {
+  margin-bottom: 10px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.back-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-btn:hover {
+  background: #764ba2;
+}
