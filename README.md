@@ -1,108 +1,58 @@
-\# Disaster-Preparedness Training Platform
+# Disaster-Preparedness Training Platform
 
+A web app I built to simulate emergency response scenarios. Pick a disaster, make a decision, and see if it works out.
 
+## Live Demo
 
-Interactive web-based platform for training emergency responders in disaster response scenarios.
+Check it out here: https://disaster-preparedness-platform.netlify.app
 
+(Backend: https://disaster-prep-platform-1.onrender.com if you want to test the API directly)
 
+## What it does
 
-\## Features
+- 5 different disaster scenarios (earthquake, flood, fire, chemical spill, power outage)
+- Choose your role (responder, trainer, or admin - different people see different things)
+- Pick a decision for each scenario
+- Get instant feedback on whether you chose right or not
+- See your score and what would've happened
 
+## Built with
 
+- FastAPI for the backend (Python)
+- React for the frontend
+- Render for hosting the backend
+- Netlify for hosting the frontend
 
-\- 5 disaster scenarios (Earthquake, Flood, Fire, Chemical Spill, Power Outage)
+## Running locally
 
-\- Role-based access control (Responder, Trainer, Admin)
-
-\- Real-time decision evaluation with instant feedback
-
-\- Full-stack REST API architecture
-
-
-
-\## Tech Stack
-
-
-
-\- \*\*Backend:\*\* FastAPI (Python), REST API
-
-\- \*\*Frontend:\*\* React, Axios
-
-\- \*\*Deployment:\*\* Render (backend), Netlify (frontend)
-
-
-
-\## Live Demo
-
-
-
-\- Frontend: https://\[your-netlify-url].netlify.app
-
-\- Backend API: https://disaster-prep-api.onrender.com
-
-
-
-\## Local Setup
-
-
-
+**Backend first:**
 ```bash
-
-\# Backend
-
 cd backend
-
 python -m venv venv
-
-source venv/bin/activate
-
+source venv/bin/activate  # on Mac/Linux, or venv\Scripts\activate on Windows
 pip install -r requirements.txt
-
 python main.py
-
-
-
-\# Frontend (new terminal)
-
-cd frontend
-
-npm install
-
-npm start
-
 ```
 
+Then **frontend in a new terminal:**
+```bash
+cd frontend
+npm install
+npm start
+```
 
+Open http://localhost:3000 and you're good to go.
 
-\## API Endpoints
+## How the API works
 
+- `GET /scenarios` - pulls all 5 scenarios
+- `GET /scenarios/{id}` - gets one scenario
+- `POST /simulate` - you send your decision, it tells you if you were right
+- `GET /health` - just checks if the server's up
 
+## About me
 
-\- `GET /scenarios` - Get all disaster scenarios
+Aditi Maharor - CS student at BIT Mesra, graduating 2028. CGPA 8.52.
 
-\- `GET /scenarios/{id}` - Get specific scenario  
-
-\- `POST /simulate` - Evaluate user decision
-
-\- `GET /health` - Health check
-
-
-
-\## Deployment
-
-
-
-\- Backend deployed on Render
-
-\- Frontend deployed on Netlify
-
-\- Both services communicate via REST API
-
-
-
-\## Author
-
-
-
-Aditi Maharor | B.Tech CSE 2028 | BIT Mesra
-
+GitHub: https://github.com/aditi-io
+LinkedIn: https://linkedin.com/in/aditimaharor
